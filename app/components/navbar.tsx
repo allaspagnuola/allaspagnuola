@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between">
         <Link href="/" className="text-xl font-bold">
-          Portfolio
+          Chloe.Z
         </Link>
 
         {/* Desktop Navigation */}

@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Mail, MapPin, Phone, Linkedin, Github, Twitter, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui-unused/card"
 import { motion } from "framer-motion"
 
 export default function Contact() {

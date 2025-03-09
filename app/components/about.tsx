@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui-unused/card"
 import { Code, Figma, Globe, Palette } from "lucide-react"
 
 export default function About() {

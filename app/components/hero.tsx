@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Hero() {
   const [typedText, setTypedText] = useState("")
-  const fullText = "I create meaningful digital experiences."
+  const fullText = "I build beautiful website."
 
   useEffect(() => {
     if (typedText.length < fullText.length) {
@@ -32,7 +32,7 @@ export default function Hero() {
     <section className="relative h-screen flex flex-col justify-center items-center text-center px-4">
       <div className="space-y-6 max-w-3xl">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
-          Hello, I'm <span className="text-primary">Your Name</span>
+          Hello, I'm <span className="text-primary">Chloe</span>
         </h1>
         <h2 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground min-h-[2.5rem]">
           {typedText}
@@ -47,8 +47,7 @@ export default function Hero() {
           </Button>
           <Button variant="outline" size="lg" asChild>
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-              <FileText className="h-4 w-4" />
-              Download Resume
+              Check Resume
             </a>
           </Button>
           <Button variant="outline" size="lg" onClick={() => handleScroll("contact")}>

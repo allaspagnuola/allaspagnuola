@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -56,7 +56,7 @@ export default function Navbar() {
             </a>
           ))}
           <Button variant="outline" size="sm" className="ml-4" asChild>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 uppercase text-sm">
               <FileText className="h-4 w-4" />
               Resume
             </a>

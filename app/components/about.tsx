@@ -1,30 +1,26 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui-unused/card"
-import { Code, Figma, Globe, Palette } from "lucide-react"
+import {  FaReact, FaFigma, FaDocker, FaGithub, FaPython, FaJava } from "react-icons/fa"
+import { SiAuth0, SiVercel, SiNextdotjs, SiMongodb, SiExpress, SiMysql, SiTypescript, SiJavascript } from "react-icons/si"
+import SkillCarousel from "./ui/skillCarousel"
+
 
 export default function About() {
   const skills = [
-    {
-      icon: <Code className="h-6 w-6" />,
-      title: "Development",
-      description: "Building responsive and performant web applications with modern frameworks and technologies.",
-    },
-    {
-      icon: <Figma className="h-6 w-6" />,
-      title: "UI/UX Design",
-      description: "Creating intuitive user interfaces and meaningful experiences that solve real problems.",
-    },
-    {
-      icon: <Palette className="h-6 w-6" />,
-      title: "Visual Design",
-      description: "Crafting visually appealing designs with attention to typography, color, and composition.",
-    },
-    {
-      icon: <Globe className="h-6 w-6" />,
-      title: "Web Strategy",
-      description: "Developing comprehensive web strategies that align with business goals and user needs.",
-    },
+    { icon: <SiJavascript className="h-6 w-6" />, title: "JavaScript" },
+    { icon: <SiTypescript className="h-6 w-6" />, title: "TypeScript" },
+    { icon: <FaPython className="h-6 w-6" />, title: "Python" },
+    { icon: <FaJava className="h-6 w-6" />, title: "Java" },
+    { icon: <SiMysql className="h-6 w-6" />, title: "SQL" },
+    { icon: <FaReact className="h-6 w-6" />, title: "React" },
+    { icon: <SiNextdotjs className="h-6 w-6" />, title: "Next.js" },
+    { icon: <SiExpress className="h-6 w-6" />, title: "Express" },
+    { icon: <FaFigma className="h-6 w-6" />, title: "Figma" },
+    { icon: <SiAuth0 className="h-6 w-6" />, title: "Auth0" },
+    { icon: <FaDocker className="h-6 w-6" />, title: "Docker" },
+    { icon: <SiVercel className="h-6 w-6" />, title: "Vercel" },
+    { icon: <SiMongodb className="h-6 w-6" />, title: "MongoDB" },
+    { icon: <FaGithub className="h-6 w-6" />, title: "Git" }
   ]
 
   return (
@@ -65,22 +61,8 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-24">
-          <h3 className="text-2xl font-bold text-center mb-12">My Expertise</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skills.map((skill, index) => (
-              <Card key={index} className="border-none shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="p-6 space-y-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                    {skill.icon}
-                  </div>
-                  <h4 className="text-xl font-semibold">{skill.title}</h4>
-                  <p className="text-muted-foreground text-sm">{skill.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
+        <SkillCarousel skills={skills} /> 
+        
       </div>
     </section>
   )

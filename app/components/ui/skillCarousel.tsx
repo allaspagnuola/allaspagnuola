@@ -50,7 +50,7 @@ const SkillsCarousel: React.FC<{ skills: SkillSet }> = ({ skills }) => {
   useEffect(() => {
     let animationId: number
     let lastTimestamp = 0
-    const scrollSpeed = 0.1 // pixels per millisecond
+    const scrollSpeed = 0.1// pixels per millisecond
 
     const autoScroll = (timestamp: number) => {
       if (!carouselRef.current) return

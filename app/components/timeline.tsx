@@ -1,11 +1,56 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { GraduationCap, Briefcase } from "lucide-react"
 
+// Create a custom event for programmatic scrolling
+const SCROLL_EVENT_NAME = "programmaticScroll"
+
+// Export this function to be used by other components
+export function triggerProgrammaticScroll() {
+  // Create and dispatch a custom event
+  const event = new CustomEvent(SCROLL_EVENT_NAME)
+  window.dispatchEvent(event)
+}
+
 export default function Timeline() {
   const [hoveredId, setHoveredId] = useState<number | null>(null)
+  const [isProgrammaticScrolling, setIsProgrammaticScrolling] = useState(false)
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  useEffect(() => {
+    // Listen for our custom programmatic scroll event
+    const handleProgrammaticScroll = () => {
+      setIsProgrammaticScrolling(true)
+
+      // Clear any existing timeout
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current)
+      }
+
+      // Reset after scrolling animation is likely complete
+      scrollTimeoutRef.current = setTimeout(() => {
+        setIsProgrammaticScrolling(false)
+      }, 1000) // Adjust timing based on your scroll animation duration
+    }
+
+    window.addEventListener(SCROLL_EVENT_NAME, handleProgrammaticScroll)
+
+    return () => {
+      window.removeEventListener(SCROLL_EVENT_NAME, handleProgrammaticScroll)
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current)
+      }
+    }
+  }, [])
+
+  // Only set hovered ID if not during programmatic scrolling
+  const handleHoverStart = (id: number) => {
+    if (!isProgrammaticScrolling) {
+      setHoveredId(id)
+    }
+  }
 
   // Combine education and experience into a single timeline, sorted by date
   const timelineEvents = [
@@ -96,7 +141,7 @@ export default function Timeline() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
-                onHoverStart={() => setHoveredId(event.id)}
+                onHoverStart={() => handleHoverStart(event.id)}
                 onHoverEnd={() => setHoveredId(null)}
               >
                 <TimelineItem {...event} isLeft={index % 2 === 0} isHovered={hoveredId === event.id} />
@@ -217,3 +262,4 @@ function TimelineItem({
     </div>
   )
 }
+

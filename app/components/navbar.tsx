@@ -1,9 +1,12 @@
 "use client"
 
+import type React from "react"
+
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { triggerProgrammaticScroll } from "./timeline" // Import the function
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -20,6 +23,23 @@ export default function Navbar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   const navItems = ["about", "projects", "timeline", "contact"]
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, item: string) => {
+    e.preventDefault()
+
+    // Trigger the custom event before scrolling
+    triggerProgrammaticScroll()
+
+    const element = document.getElementById(item)
+    if (element) {
+      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 100
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      })
+      setIsMenuOpen(false)
+    }
+  }
 
   return (
     <header
@@ -39,24 +59,18 @@ export default function Navbar() {
               key={item}
               href={`#${item}`}
               className="text-sm uppercase tracking-wider hover:text-primary transition-colors"
-              onClick={(e) => {
-                e.preventDefault()
-                const element = document.getElementById(item)
-                if (element) {
-                  const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 100
-                  window.scrollTo({
-                    top: offsetTop,
-                    behavior: "smooth",
-                  })
-                  setIsMenuOpen(false)
-                }
-              }}
+              onClick={(e) => handleNavClick(e, item)}
             >
               {item}
             </a>
           ))}
           <Button variant="outline" size="sm" className="ml-4" asChild>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 uppercase text-sm">
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 uppercase text-sm"
+            >
               <FileText className="h-4 w-4" />
               Resume
             </a>
@@ -77,18 +91,7 @@ export default function Navbar() {
                   key={item}
                   href={`#${item}`}
                   className="px-6 py-3 text-sm uppercase tracking-wider hover:bg-muted transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    const element = document.getElementById(item)
-                    if (element) {
-                      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 100
-                      window.scrollTo({
-                        top: offsetTop,
-                        behavior: "smooth",
-                      })
-                      setIsMenuOpen(false)
-                    }
-                  }}
+                  onClick={(e) => handleNavClick(e, item)}
                 >
                   {item}
                 </a>

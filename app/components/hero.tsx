@@ -1,8 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowDown, FileText } from "lucide-react"
+import { ArrowDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { triggerProgrammaticScroll } from "./timeline" // Import the function
 
 export default function Hero() {
   const [typedText, setTypedText] = useState("")
@@ -18,6 +19,9 @@ export default function Hero() {
   }, [typedText])
 
   const handleScroll = (elementId: string) => {
+    // Trigger the custom event before scrolling
+    triggerProgrammaticScroll()
+
     const element = document.getElementById(elementId)
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 100
@@ -39,10 +43,10 @@ export default function Hero() {
           <span className="animate-pulse">|</span>
         </h2>
         <span className="text-muted-foreground max-w-xl mx-auto">
-          <p>UI/UX Designer and Web Developer creating clean, intuitive digital experiences.</p> 
+          <p>UI/UX Designer and Web Developer creating clean, intuitive digital experiences.</p>
           <p>Skilled at grasping people's needs and delivering user-friendly solutions.</p>
-          <p>Passionate about tech and always eager to learn.</p> 
-          <p>A thinker who enjoys philosophy and travel.</p> 
+          <p>Passionate about tech and always eager to learn.</p>
+          <p>A thinker who enjoys philosophy and travel.</p>
         </span>
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
           <Button size="lg" onClick={() => handleScroll("projects")}>

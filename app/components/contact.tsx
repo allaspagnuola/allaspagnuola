@@ -66,7 +66,7 @@ export default function Contact() {
               <div className="flex flex-col md:flex-row items-center gap-6">
                 <div className="relative w-24 h-24 rounded-full overflow-hidden border-4 border-primary/10">
                   <Image
-                    src="/Portfolio/placeholder.svg?height=200&width=200"
+                    src="/placeholder.svg?height=200&width=200"
                     alt="Profile"
                     width={200}
                     height={200}

@@ -16,7 +16,7 @@ export default function Projects() {
       id: 1,
       title: "E-commerce Website",
       description: "A modern e-commerce platform with a focus on user experience and performance.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/Portfolio/placeholder.svg?height=600&width=800",
       tags: ["Web Development", "UI/UX", "E-commerce"],
       category: "development",
       demoUrl: "#",
@@ -26,7 +26,7 @@ export default function Projects() {
       id: 2,
       title: "Mobile Banking App",
       description: "A clean and intuitive banking application designed for ease of use and security.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/Portfolio/placeholder.svg?height=600&width=800",
       tags: ["UI/UX", "Mobile", "Fintech"],
       category: "design",
       demoUrl: "#",
@@ -36,7 +36,7 @@ export default function Projects() {
       id: 3,
       title: "Portfolio Template",
       description: "A customizable portfolio template for creative professionals.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/Portfolio/placeholder.svg?height=600&width=800",
       tags: ["Web Development", "Template", "Open Source"],
       category: "development",
       demoUrl: "#",
@@ -46,7 +46,7 @@ export default function Projects() {
       id: 4,
       title: "Travel App UI Kit",
       description: "A comprehensive UI kit for travel and booking applications.",
-      image: "/placeholder.svg?height=600&width=800",
+      image: "/Portfolio/placeholder.svg?height=600&width=800",
       tags: ["UI/UX", "Design System", "Mobile"],
       category: "design",
       demoUrl: "#",
@@ -115,7 +115,7 @@ export default function Projects() {
                 {/* Image Container */}
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || "/Portfolio/placeholder.svg"}
                     alt={project.title}
                     width={800}
                     height={600}

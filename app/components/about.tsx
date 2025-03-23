@@ -30,7 +30,7 @@ export default function About() {
           <div className="w-full md:w-2/5">
             <div className="relative aspect-square max-w-md mx-auto">
               <Image
-                src="/placeholder.svg?height=500&width=500"
+                src="/Portfolio/placeholder.svg?height=500&width=500"
                 alt="Profile"
                 width={500}
                 height={500}

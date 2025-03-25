@@ -30,7 +30,7 @@ export default function About() {
           <div className="w-full md:w-2/5">
             <div className="relative aspect-square max-w-md mx-auto">
               <Image
-                src="/placeholder.svg?height=500&width=500"
+                src="/portfolio.jpg?height=500&width=500"
                 alt="Profile"
                 width={500}
                 height={500}
@@ -43,17 +43,14 @@ export default function About() {
           <div className="w-full md:w-3/5 space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">About Me</h2>
             <p className="text-muted-foreground">
-              I'm a passionate web developer and UI/UX designer with a focus on creating clean, user-friendly, and
-              accessible digital experiences. With a background in both design and development, I bridge the gap between
-              aesthetics and functionality.
+            I’m a curious and tech-driven Computer Science graduate from The University of Melbourne, where I earned High Distinction and multiple scholarships. Alongside my major, I studied finance and mathematics, drawn to problem-solving and analytics. I love exploring AI tools and technology, always looking for ways to apply them to real life. Outside of tech, you’ll find me reading Albert Camus, traveling, or getting lost in Japanese anime—all of which fuel my creativity and curiosity.
             </p>
             <p className="text-muted-foreground">
-              My approach combines minimalist design principles with interactive elements to create engaging user
-              experiences. I believe in the power of simplicity and thoughtful design to solve complex problems.
+            On the coding side, I specialize in full-stack development with React, Next.js, and Node.js, building scalable and user-friendly web apps. I’ve led Agile Scrum teams, ensuring smooth collaboration between developers and non-tech users. My passion lies in AI, automation, and emerging tech, always experimenting with new tools to push boundaries and create impactful solutions.
             </p>
             <div className="pt-4">
               <Button asChild>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/Resume_ChloeZhou.pdf" target="_blank" rel="noopener noreferrer">
                   Download Resume
                 </a>
               </Button>

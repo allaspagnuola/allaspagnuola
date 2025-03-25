@@ -14,49 +14,52 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Website",
-      description: "A modern e-commerce platform with a focus on user experience and performance.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Web Development", "UI/UX", "E-commerce"],
+      title: "LMS Website",
+      description: "A learning management system designed for psychologist training.",
+      image: "/LMS.png?height=600&width=800",
+      tags: ["Web Development", "UI/UX", "React.js", "Node.js"],
       category: "development",
-      demoUrl: "#",
-      githubUrl: "#",
     },
     {
       id: 2,
-      title: "Mobile Banking App",
-      description: "A clean and intuitive banking application designed for ease of use and security.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["UI/UX", "Mobile", "Fintech"],
-      category: "design",
-      demoUrl: "#",
-      githubUrl: "#",
+      title: "Packing List",
+      description: "A packing list app with CRUD, filtering, and sorting features.",
+      image: "/Packing_list.png?height=600&width=800",
+      tags: ["Web Development", "UI/UX", "React.js", "Vercel"],
+      category: "development",
+      demoUrl: "https://packing-list-client-nsdpist7j-anthonys-projects-c51cd965.vercel.app/",
+      githubUrl: "https://github.com/any11-development-center/packing-list",
     },
     {
       id: 3,
-      title: "Portfolio Template",
-      description: "A customizable portfolio template for creative professionals.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["Web Development", "Template", "Open Source"],
+      title: "Recipe Finder",
+      description: "A fridge inventory app that suggests recipes based on available ingredients, with CRUD and user accounts.",
+      image: "/Recipe_finder.png?height=600&width=800",
+      tags: ["Web Development", "Javascript", "Python", "Flask"],
       category: "development",
-      demoUrl: "#",
-      githubUrl: "#",
     },
     {
       id: 4,
-      title: "Travel App UI Kit",
-      description: "A comprehensive UI kit for travel and booking applications.",
-      image: "/placeholder.svg?height=600&width=800",
-      tags: ["UI/UX", "Design System", "Mobile"],
+      title: "Mobile Prototype",
+      description: "A university-focused social media prototype.",
+      image: "/mobile_prototype.png?height=600&width=800",
+      tags: ["UI/UX", "Design System", "Mobile", "Figma"],
       category: "design",
-      demoUrl: "#",
-      githubUrl: "#",
+    },
+    {
+      id: 5,
+      title: "Web Prototype",
+      description: "A web prototype for a learning management system.",
+      image: "/web_prototype.png?height=600&width=800",
+      tags: ["UI/UX", "Design System", "Web", "Figma"],
+      category: "design",
     },
   ]
 
   const filteredProjects =
-    activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter)
+    activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter);
 
+  
   return (
     <section id="projects" className="py-20 md:py-32 bg-muted/30">
       <div className="container">
@@ -66,6 +69,7 @@ export default function Projects() {
             A selection of my recent work spanning web development and UI/UX design.
           </p>
         </div>
+
 
         <div className="flex justify-center mb-12">
           <div className="flex flex-wrap gap-2 justify-center">
@@ -83,98 +87,37 @@ export default function Projects() {
           </div>
         </div>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeFilter}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.1,
-                },
-              },
-            }}
-          >
-            {filteredProjects.map((project) => (
-              <motion.div
-                key={project.id}
-                layout
-                variants={{
-                  hidden: { y: 20, opacity: 0 },
-                  visible: { y: 0, opacity: 1 },
-                }}
-                onHoverStart={() => setHoveredId(project.id)}
-                onHoverEnd={() => setHoveredId(null)}
-                className="group relative bg-background rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
-              >
-                {/* Image Container */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    width={800}
-                    height={600}
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                    <motion.a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-background text-foreground hover:bg-primary hover:text-primary-foreground p-2 rounded-full transition-colors"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: hoveredId === project.id ? 1 : 0 }}
-                      transition={{ delay: 0.1 }}
-                    >
-                      <ExternalLink className="h-5 w-5" />
-                      <span className="sr-only">View Demo</span>
-                    </motion.a>
-                    <motion.a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-background text-foreground hover:bg-primary hover:text-primary-foreground p-2 rounded-full transition-colors"
-                      initial={{ scale: 0 }}
-                      animate={{ scale: hoveredId === project.id ? 1 : 0 }}
-                      transition={{ delay: 0.2 }}
-                    >
-                      <Github className="h-5 w-5" />
-                      <span className="sr-only">View Code</span>
-                    </motion.a>
-                  </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProjects.map((project) => (
+            <motion.div
+              key={project.id}
+              className="bg-background rounded-lg overflow-hidden shadow-md"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  width={800}
+                  height={600}
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <div className="flex flex-wrap gap-1 mb-2">
+                  {project.tags.map((tag, index) => (
+                    <Badge key={index} variant="secondary" className="font-normal text-xs px-2 py-0.5">
+                      {tag}
+                    </Badge>
+                  ))}
                 </div>
-
-                {/* Content */}
-                <div className="p-4">
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.2 }}
-                    className="flex flex-wrap gap-1 mb-2"
-                  >
-                    {project.tags.map((tag, index) => (
-                      <Badge key={index} variant="secondary" className="font-normal text-xs px-2 py-0.5">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </motion.div>
-
-                  <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
-                </div>
-
-                {/* Bottom Gradient Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
+                <h3 className="font-semibold mb-1">{project.title}</h3>
+                <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
         <div className="text-center mt-12">
           <Button variant="outline" size="lg" asChild>

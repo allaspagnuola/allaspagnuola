@@ -56,7 +56,7 @@ export default function Timeline() {
   const timelineEvents = [
     {
       id: 1,
-      title: "Senior UI/UX Designer",
+      title: "System Administrator",
       organization: "Tech Solutions Inc.",
       period: "2021 - Present",
       description:

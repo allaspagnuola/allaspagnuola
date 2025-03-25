@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import {  FaReact, FaFigma, FaDocker, FaGithub, FaPython, FaJava } from "react-icons/fa"
 import { SiAuth0, SiVercel, SiNextdotjs, SiMongodb, SiExpress, SiMysql, SiTypescript, SiJavascript } from "react-icons/si"
 import SkillCarousel from "./ui/skillCarousel"
+import portfolioImage from "../../public/portfolio.jpg"
 
 
 export default function About() {
@@ -30,7 +31,7 @@ export default function About() {
           <div className="w-full md:w-2/5">
             <div className="relative aspect-square max-w-md mx-auto">
               <Image
-                src="/portfolio.jpg?height=500&width=500"
+                src={portfolioImage}
                 alt="Profile"
                 width={500}
                 height={500}

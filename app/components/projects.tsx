@@ -6,6 +6,11 @@ import { ArrowUpRight, Github, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui-unused/badge"
 import { motion, AnimatePresence } from "framer-motion"
+import packingListImage from "../../public/Packing_list.png"
+import recipeFinderImage from "../../public/Recipe_finder.png"
+import mobilePrototypeImage from "../../public/mobile_prototype.png"
+import webPrototypeImage from "../../public/web_prototype.png"
+import lmsImage from "../../public/LMS.png"
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("all")
@@ -16,7 +21,7 @@ export default function Projects() {
       id: 1,
       title: "LMS Website",
       description: "A learning management system designed for psychologist training.",
-      image: "/LMS.png?height=600&width=800",
+      image: lmsImage,
       tags: ["Web Development", "UI/UX", "React.js", "Node.js"],
       category: "development",
     },
@@ -24,7 +29,7 @@ export default function Projects() {
       id: 2,
       title: "Packing List",
       description: "A packing list app with CRUD, filtering, and sorting features.",
-      image: "/Packing_list.png?height=600&width=800",
+      image: packingListImage,
       tags: ["Web Development", "UI/UX", "React.js", "Vercel"],
       category: "development",
       demoUrl: "https://packing-list-client-nsdpist7j-anthonys-projects-c51cd965.vercel.app/",
@@ -34,7 +39,7 @@ export default function Projects() {
       id: 3,
       title: "Recipe Finder",
       description: "A fridge inventory app that suggests recipes based on available ingredients, with CRUD and user accounts.",
-      image: "/Recipe_finder.png?height=600&width=800",
+      image: recipeFinderImage,
       tags: ["Web Development", "Javascript", "Python", "Flask"],
       category: "development",
     },
@@ -42,7 +47,7 @@ export default function Projects() {
       id: 4,
       title: "Mobile Prototype",
       description: "A university-focused social media prototype.",
-      image: "/mobile_prototype.png?height=600&width=800",
+      image: mobilePrototypeImage,
       tags: ["UI/UX", "Design System", "Mobile", "Figma"],
       category: "design",
     },
@@ -50,7 +55,7 @@ export default function Projects() {
       id: 5,
       title: "Web Prototype",
       description: "A web prototype for a learning management system.",
-      image: "/web_prototype.png?height=600&width=800",
+      image: webPrototypeImage,
       tags: ["UI/UX", "Design System", "Web", "Figma"],
       category: "design",
     },

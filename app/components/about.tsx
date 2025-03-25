@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import {  FaReact, FaFigma, FaDocker, FaGithub, FaPython, FaJava } from "react-icons/fa"
 import { SiAuth0, SiVercel, SiNextdotjs, SiMongodb, SiExpress, SiMysql, SiTypescript, SiJavascript } from "react-icons/si"
 import SkillCarousel from "./ui/skillCarousel"
-import portfolioImage from "../../public/portfolio.jpg"
+import portfolioImage from "./public/portfolio.jpg"
 
 
 export default function About() {

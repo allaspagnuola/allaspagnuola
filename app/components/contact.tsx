@@ -11,19 +11,19 @@ export default function Contact() {
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
-      value: "hello@yourname.com",
-      link: "mailto:hello@yourname.com",
+      value: "chloe.siyi.zhou@gmail.com",
+      link: "mailto:chloe.siyi.zhou@gmail.com",
     },
     {
       icon: <Phone className="h-5 w-5" />,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "0466-177-972",
+      link: "tel:+61466177972",
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Melbourne, Australia",
       link: null,
     },
   ]
@@ -32,20 +32,14 @@ export default function Contact() {
     {
       name: "LinkedIn",
       icon: <Linkedin className="h-5 w-5" />,
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://www.linkedin.com/in/siyi-chloe-zhou/",
       color: "hover:bg-[#0077B5] hover:border-[#0077B5]",
     },
     {
       name: "GitHub",
       icon: <Github className="h-5 w-5" />,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/allaspagnuola",
       color: "hover:bg-[#333] hover:border-[#333]",
-    },
-    {
-      name: "Twitter",
-      icon: <Twitter className="h-5 w-5" />,
-      url: "https://twitter.com/yourusername",
-      color: "hover:bg-[#1DA1F2] hover:border-[#1DA1F2]",
     },
   ]
 
@@ -74,14 +68,14 @@ export default function Contact() {
                   />
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl font-semibold mb-2">Your Name</h3>
+                  <h3 className="text-xl font-semibold mb-2">Chloe Zhou</h3>
                   <p className="text-primary mb-1">Web Developer & UI/UX Designer</p>
                   <p className="text-sm text-muted-foreground mb-4">
                     Creating digital experiences that combine beauty with functionality
                   </p>
                   <Button asChild>
                     <a
-                      href="https://linkedin.com/in/yourusername"
+                      href="https://www.linkedin.com/in/siyi-chloe-zhou/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
@@ -97,12 +91,8 @@ export default function Contact() {
                   <div className="text-sm text-muted-foreground mb-2">LinkedIn Stats</div>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <div className="font-semibold">500+</div>
+                      <div className="font-semibold">300+</div>
                       <div className="text-muted-foreground">Connections</div>
-                    </div>
-                    <div>
-                      <div className="font-semibold">50+</div>
-                      <div className="text-muted-foreground">Recommendations</div>
                     </div>
                   </div>
                 </div>

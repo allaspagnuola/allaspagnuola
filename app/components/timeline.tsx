@@ -57,64 +57,80 @@ export default function Timeline() {
     {
       id: 1,
       title: "System Administrator",
-      organization: "Tech Solutions Inc.",
-      period: "2021 - Present",
+      organization: "Bapcor Limited",
+      period: "Mar 2025 - Present",
       description:
-        "Lead the design of digital products from concept to launch, collaborating with cross-functional teams to deliver exceptional user experiences.",
+        "Provided IT support to over 5,500 staff, managing domain migration and maintaining enterprise systems.",
       detailedDescription: [
-        "Led a team of 4 designers in creating user-centered design solutions",
-        "Implemented design system that reduced design inconsistencies by 60%",
-        "Conducted user research and usability testing with over 500 participants",
-        "Increased user engagement by 40% through redesigned user flows",
+        "Resolved complex tickets related to authentication and configuration",
+        "Migrated email systems with minimal user disruption",
+        "Documented workflows to enhance future migration processes",
+        "Worked across domains with multiple teams to ensure system stability"
       ],
       type: "experience",
-      icon: <Briefcase className="h-5 w-5" />,
+      icon: <Briefcase className="h-5 w-5" />
     },
     {
       id: 2,
-      title: "Master of Design",
-      organization: "Design University",
-      period: "2018 - 2020",
-      description: "Specialized in User Experience Design with a focus on digital interfaces and interactive systems.",
+      title: "Full Stack Developer",
+      organization: "Virtual Adults (Deakin University)",
+      period: "Jun 2024 - Nov 2024",
+      description:
+        "Led development of an AI-powered psychology learning platform using Agile and full-stack tech.",
       detailedDescription: [
-        "Thesis: 'The Impact of Microinteractions on User Engagement'",
-        "GPA: 3.95/4.0",
-        "Led 3 award-winning design projects",
-        "Published research paper on UI animation patterns",
+        "Delivered early prototype within days to guide project direction",
+        "Implemented AI chat features (text & voice) using OpenAI API",
+        "Applied secure authentication with Auth0 and JWT",
+        "Reduced AI cost by 70% through optimization"
       ],
-      type: "education",
-      icon: <GraduationCap className="h-5 w-5" />,
+      type: "experience",
+      icon: <Briefcase className="h-5 w-5" />
     },
     {
       id: 3,
-      title: "Web Developer",
-      organization: "Creative Agency",
-      period: "2019 - 2021",
+      title: "Associate Strategy Consultant Intern",
+      organization: "Efinity Consulting Group",
+      period: "Aug 2023 – Nov 2023",
       description:
-        "Developed responsive websites and web applications for clients across various industries, focusing on performance and accessibility.",
+        "Supported strategic expansion planning through market analysis and executive engagement.",
       detailedDescription: [
-        "Built 20+ responsive websites using modern web technologies",
-        "Reduced load times by 60% through optimization techniques",
-        "Implemented CI/CD pipelines reducing deployment time by 75%",
-        "Mentored 3 junior developers",
+        "Conducted market research and industry analysis",
+        "Delivered insights that influenced client strategy",
+        "Built rapport with stakeholders to guide recommendations"
       ],
       type: "experience",
-      icon: <Briefcase className="h-5 w-5" />,
+      icon: <Briefcase className="h-5 w-5" />
     },
     {
       id: 4,
-      title: "Bachelor of Computer Science",
-      organization: "Tech University",
-      period: "2014 - 2018",
-      description: "Studied software development, algorithms, and web technologies with a minor in graphic design.",
+      title: "Bachelor of Science (Computing & Software Systems)",
+      organization: "University of Melbourne",
+      period: "Feb 2022 – Nov 2024",
+      description:
+        "Graduated with High Distinction and multiple academic scholarships.",
       detailedDescription: [
-        "Dean's List all semesters",
-        "Led the Web Development Club",
-        "Completed 3 internships",
-        "Developed an award-winning campus navigation app",
+        "Melbourne Global Scholars Award 2024",
+        "Bachelor of Commerce Global Scholarship (Top 50 Students)",
+        "Melbourne International Undergraduate Scholarship (Top 5% International Students)",
+        "Peer Mentor, awarded for People Leadership",
       ],
       type: "education",
-      icon: <GraduationCap className="h-5 w-5" />,
+      icon: <GraduationCap className="h-5 w-5" />
+    },
+    {
+      id: 5,
+      title: "Contract Web Developer",
+      organization: "Gr8 Building Service",
+      period: "Feb 2023 – July 2023",
+      description:
+        "Managed end-to-end web development using WordPress and GoDaddy tools.",
+      detailedDescription: [
+        "Increased business performance by 20% through optimized site design",
+        "Provided ongoing site maintenance",
+        "Handled all hosting, registration, and deployment"
+      ],
+      type: "experience",
+      icon: <Briefcase className="h-5 w-5" />
     },
   ].sort((a, b) => {
     const aYear = Number.parseInt(a.period.split(" - ")[1] === "Present" ? "2024" : a.period.split(" - ")[1])

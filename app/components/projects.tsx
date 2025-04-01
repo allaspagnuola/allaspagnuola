@@ -8,8 +8,8 @@ import { Badge } from "@/components/ui-unused/badge"
 import { motion, AnimatePresence } from "framer-motion"
 import packingListImage from "../../public/Packing_list.png"
 import recipeFinderImage from "../../public/Recipe_finder.png"
-import mobilePrototypeImage from "../../public/mobile_prototype.png"
-import webPrototypeImage from "../../public/web_prototype.png"
+import mobilePrototypeImage from "../../public/Mobile_prototype.png"
+import webPrototypeImage from "../../public/Web_prototype.png"
 import lmsImage from "../../public/LMS.png"
 
 export default function Projects() {

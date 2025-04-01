@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",  // <=== enables static exports
+  // output: "export",  // <=== enables static exports
   images: {
     unoptimized: true,
   },
@@ -12,8 +12,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
-    domains: [ 'images.com' ],
+    unoptimized: false,
   },
   experimental: {
     webpackBuildWorker: true,

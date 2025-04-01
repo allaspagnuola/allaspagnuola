@@ -62,7 +62,6 @@ export default function Contact() {
                   <Image
                     src="/placeholder.svg?height=200&width=200"
                     alt="Profile"
-                    loading="lazy"
                     width={200}
                     height={200}
                     className="object-cover"

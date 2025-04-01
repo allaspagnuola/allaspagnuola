@@ -33,7 +33,6 @@ export default function About() {
               <Image
                 src={portfolioImage}
                 alt="Profile"
-                loading="lazy"
                 width={500}
                 height={500}
                 className="rounded-2xl object-cover"

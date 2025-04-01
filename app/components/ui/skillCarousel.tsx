@@ -46,50 +46,46 @@ const SkillsCarousel: React.FC<{ skills: SkillSet }> = ({ skills }) => {
     setIsTouching(false)
   }
 
-  // Auto-scrolling effect
   useEffect(() => {
     let animationId: number
     let lastTimestamp = 0
-    const scrollSpeed = 0.1// pixels per millisecond
-
+    const scrollSpeed = 0.1 // pixels/ms
+  
     const autoScroll = (timestamp: number) => {
       if (!carouselRef.current) return
-
+  
       if (lastTimestamp) {
         const delta = timestamp - lastTimestamp
-
-        // If mouse is over, scroll based on mouse position
+  
         if (isMouseOver && !isTouching) {
-          // Determine scroll direction and speed based on mouse position
-          // Center (0.5) is neutral, edges are faster
           const direction = mousePosition > 0.5 ? 1 : -1
-          const intensity = Math.abs(mousePosition - 0.5) * 1.5 // 0 at center, 1 at edges
+          const intensity = Math.abs(mousePosition - 0.5) * 1.5
           carouselRef.current.scrollLeft += direction * intensity * scrollSpeed * delta
-        }
-        // If not interacting, continue auto-scrolling
-        else if (!isTouching) {
+        } else if (!isTouching) {
           carouselRef.current.scrollLeft += scrollSpeed * delta
         }
-
-        // Loop back to start when reaching the end
+  
         const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current
-        if (scrollLeft + clientWidth >= scrollWidth) {
+  
+        // If scrolled near the end, reset seamlessly
+        if (scrollLeft >= scrollWidth - clientWidth) {
           carouselRef.current.scrollLeft = 0
         }
-
+  
         setScrollPosition(carouselRef.current.scrollLeft)
       }
-
+  
       lastTimestamp = timestamp
       animationId = requestAnimationFrame(autoScroll)
     }
-
+  
     animationId = requestAnimationFrame(autoScroll)
-
+  
     return () => {
       cancelAnimationFrame(animationId)
     }
   }, [isMouseOver, mousePosition, isTouching])
+  
 
   return (
     <div className="w-full overflow-hidden py-8">

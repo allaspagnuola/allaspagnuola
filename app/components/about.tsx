@@ -33,10 +33,10 @@ export default function About() {
               <Image
                 src={portfolioImage}
                 alt="Profile"
+                loading="lazy"
                 width={500}
                 height={500}
                 className="rounded-2xl object-cover"
-                priority
               />
               <div className="absolute inset-0 rounded-2xl border border-primary/20 -m-3 z-[-1]"></div>
             </div>

@@ -53,7 +53,7 @@ export default function Hero() {
             View My Work
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <a href="/Resume_ChloeZhou.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
               Check Resume
             </a>
           </Button>

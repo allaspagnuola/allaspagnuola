@@ -97,7 +97,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="/resume.pdf"
+                href="/Resume_ChloeZhou.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 text-sm uppercase tracking-wider hover:bg-muted transition-colors flex items-center gap-2"

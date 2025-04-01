@@ -104,6 +104,7 @@ export default function Projects() {
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
+                  loading="lazy"
                   width={800}
                   height={600}
                   className="object-cover"

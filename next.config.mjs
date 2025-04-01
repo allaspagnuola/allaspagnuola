@@ -13,6 +13,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    domains: [ 'images.com' ],
   },
   experimental: {
     webpackBuildWorker: true,

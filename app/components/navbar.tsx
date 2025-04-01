@@ -66,7 +66,7 @@ export default function Navbar() {
           ))}
           <Button variant="outline" size="sm" className="ml-4" asChild>
             <a
-              href="/resume.pdf"
+              href="/Resume_ChloeZhou.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 uppercase text-sm"

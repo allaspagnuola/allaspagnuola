@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button"
 import {  FaReact, FaFigma, FaDocker, FaGithub, FaPython, FaJava } from "react-icons/fa"
 import { SiAuth0, SiVercel, SiNextdotjs, SiMongodb, SiExpress, SiMysql, SiTypescript, SiJavascript } from "react-icons/si"
 import SkillCarousel from "./ui/skillCarousel"
-import portfolioImage from "../../public/portfolio.JPG"
-
+import portfolioImage from "../../public/portfolio.jpeg"
 
 export default function About() {
   const skills = [
@@ -36,6 +35,7 @@ export default function About() {
                 width={500}
                 height={500}
                 className="rounded-2xl object-cover"
+                priority
               />
               <div className="absolute inset-0 rounded-2xl border border-primary/20 -m-3 z-[-1]"></div>
             </div>

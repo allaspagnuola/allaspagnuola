@@ -69,7 +69,7 @@ export default function Contact() {
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-xl font-semibold mb-2">Chloe Zhou</h3>
-                  <p className="text-primary mb-1">Web Developer & UI/UX Designer</p>
+                  <p className="text-primary mb-1">Software Engineer</p>
                   <p className="text-sm text-muted-foreground mb-4">
                     Creating digital experiences that combine beauty with functionality
                   </p>
@@ -91,7 +91,7 @@ export default function Contact() {
                   <div className="text-sm text-muted-foreground mb-2">LinkedIn Stats</div>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <div className="font-semibold">300+</div>
+                      <div className="font-semibold">250+</div>
                       <div className="text-muted-foreground">Connections</div>
                     </div>
                   </div>

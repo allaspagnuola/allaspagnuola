@@ -126,7 +126,7 @@ export default function Projects() {
 
         <div className="text-center mt-12">
           <Button variant="outline" size="lg" asChild>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="group">
+            <a href="https://github.com/allaspagnuola" target="_blank" rel="noopener noreferrer" className="group">
               View More on GitHub
               <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>

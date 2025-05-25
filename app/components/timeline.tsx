@@ -62,26 +62,26 @@ export default function Timeline() {
       description:
         "Provided IT support to over 5,500 staff, managing domain migration and maintaining enterprise systems.",
       detailedDescription: [
-        "Resolved complex tickets related to authentication and configuration",
-        "Migrated email systems with minimal user disruption",
-        "Documented workflows to enhance future migration processes",
-        "Worked across domains with multiple teams to ensure system stability"
+        "• Resolved complex tickets related to authentication and configuration",
+        "• Migrated email systems with minimal user disruption",
+        "• Documented workflows to enhance future migration processes",
+        "• Worked across domains with multiple teams to ensure system stability"
       ],
       type: "experience",
       icon: <Briefcase className="h-5 w-5" />
     },
     {
       id: 2,
-      title: "Full Stack Developer",
+      title: "Product Owner / Full Stack Developer",
       organization: "Virtual Adults (Deakin University)",
       period: "Jun 2024 - Nov 2024",
       description:
         "Led development of an AI-powered psychology learning platform using Agile and full-stack tech.",
       detailedDescription: [
-        "Delivered early prototype within days to guide project direction",
-        "Implemented AI chat features (text & voice) using OpenAI API",
-        "Applied secure authentication with Auth0 and JWT",
-        "Reduced AI cost by 70% through optimization"
+        "• Delivered early prototype within days to guide project direction",
+        "• Implemented AI chat features (text & voice) using OpenAI API",
+        "• Applied secure authentication with Auth0 and JWT",
+        "• educed AI cost by 70% through optimization"
       ],
       type: "experience",
       icon: <Briefcase className="h-5 w-5" />
@@ -94,9 +94,9 @@ export default function Timeline() {
       description:
         "Supported strategic expansion planning through market analysis and executive engagement.",
       detailedDescription: [
-        "Conducted market research and industry analysis",
-        "Delivered insights that influenced client strategy",
-        "Built rapport with stakeholders to guide recommendations"
+        "• Conducted market research and industry analysis",
+        "• Delivered insights that influenced client strategy",
+        "• Built rapport with stakeholders to guide recommendations"
       ],
       type: "experience",
       icon: <Briefcase className="h-5 w-5" />
@@ -109,10 +109,10 @@ export default function Timeline() {
       description:
         "Graduated with High Distinction and multiple academic scholarships.",
       detailedDescription: [
-        "Melbourne Global Scholars Award 2024",
-        "Bachelor of Commerce Global Scholarship (Top 50 Students)",
-        "Melbourne International Undergraduate Scholarship (Top 5% International Students)",
-        "Peer Mentor, awarded for People Leadership",
+        "• Melbourne Global Scholars Award 2024",
+        "• Bachelor of Commerce Global Scholarship (Top 50 Students)",
+        "• Melbourne International Undergraduate Scholarship (Top 5% International Students)",
+        "• Peer Mentor, awarded for People Leadership",
       ],
       type: "education",
       icon: <GraduationCap className="h-5 w-5" />
@@ -125,9 +125,36 @@ export default function Timeline() {
       description:
         "Managed end-to-end web development using WordPress and GoDaddy tools.",
       detailedDescription: [
-        "Increased business performance by 20% through optimized site design",
-        "Provided ongoing site maintenance",
-        "Handled all hosting, registration, and deployment"
+        "• Increased business performance by 20% through optimized site design",
+        "• Provided ongoing site maintenance",
+        "• Handled all hosting, registration, and deployment"
+      ],
+      type: "experience",
+      icon: <Briefcase className="h-5 w-5" />
+    },
+    {
+      id: 6,
+      title: "Peer Mentor",
+      organization: "University of Melbourne",
+      period: "Feb 2023 – Jun 2023",
+
+      detailedDescription: [
+        "• Demonstrated leadership skills by organizing and spearheading various activities and events to support a group of students.",
+        "• Encourage and motivate new students to succeed in their university lives."
+      ],
+      type: "experience",
+      icon: <Briefcase className="h-5 w-5" />
+    },
+    {
+      id: 7,
+      title: "Business Development Coordinator",
+      organization: "AIESEC Australia Ltd",
+      period: "Jan 2022 – Jun 2022",
+      description:
+        "Business Development Coordinator at the University of Melbourne Branch of the world largest youth-run organisation.",
+      detailedDescription: [
+        "• Exhibited strong customer service skills by effectively utilizing B2B sales techniques, including direct mail and cold calling, to engage and convert clients.",
+        "• Demonstrated interpersonal and organizational strengths through direct meetings with industry leaders and management of strategic partnerships, fostering long-term collaboration and trust."
       ],
       type: "experience",
       icon: <Briefcase className="h-5 w-5" />

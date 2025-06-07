@@ -62,10 +62,10 @@ export default function Timeline() {
       description:
         "Provided IT support to over 5,500 staff, managing domain migration and maintaining enterprise systems.",
       detailedDescription: [
-        "• Resolved complex tickets related to authentication and configuration",
-        "• Migrated email systems with minimal user disruption",
-        "• Documented workflows to enhance future migration processes",
-        "• Worked across domains with multiple teams to ensure system stability"
+        "• Achieved Top 5 teammate ranking by consistently resolving high-complexity tickets related to domain authentication and user access issues with high quality standards.",
+        "• Proactively detected and escalated critical infrastructure and cybersecurity vulnerabilities during daily ticket resolution, supporting early intervention by the infrastructure team.",
+        "• Created standardized migration documentation, improving team scalability and reducing onboarding time for new technicians.",
+        "• Actively collaborated with cross-functional teams during the dynamic migration period by sharing real-time updates, aligning workflows, and proactively solving emerging issues to ensure smooth transitions."
       ],
       type: "experience",
       icon: <Briefcase className="h-5 w-5" />
@@ -76,12 +76,10 @@ export default function Timeline() {
       organization: "Virtual Adults (Deakin University)",
       period: "Jun 2024 - Nov 2024",
       description:
-        "Led development of an AI-powered psychology learning platform using Agile and full-stack tech.",
+        "Led the end-to-end development of an AI-driven web platform for psychology training, combining product leadership and technical execution.",
       detailedDescription: [
-        "• Delivered early prototype within days to guide project direction",
-        "• Implemented AI chat features (text & voice) using OpenAI API",
-        "• Applied secure authentication with Auth0 and JWT",
-        "• educed AI cost by 70% through optimization"
+        "• Delivered a high-quality prototype within days based on client-stated use cases, and led Agile Scrum processes to ensure clear communication, rapid iteration, and timely delivery aligned to evolving client needs",
+        "• Reduced AI operation costs by 70% through proactive optimization, enabled real-time AI communication (text and voice), and achieved 99% user requirement alignment with a smooth final handover.",
       ],
       type: "experience",
       icon: <Briefcase className="h-5 w-5" />
@@ -92,11 +90,11 @@ export default function Timeline() {
       organization: "Efinity Consulting Group",
       period: "Aug 2023 – Nov 2023",
       description:
-        "Supported strategic expansion planning through market analysis and executive engagement.",
+        "Supported executives in crafting strategic business plans for client companies’ horizontal and vertical expansion through negotiation, problem-solving, and comprehensive market analysis.",
       detailedDescription: [
-        "• Conducted market research and industry analysis",
-        "• Delivered insights that influenced client strategy",
-        "• Built rapport with stakeholders to guide recommendations"
+        "• Conducted in-depth industry/market analysis, culminating in an impactful research report that informed client decision-making.",
+        "• Delivered customized marketing strategies, earning commendation from executives and clients for actionable insights.",
+        "• Demonstrated adaptability by identifying growth opportunities and aligning recommendations with client objectives, driving measurable business outcomes."
       ],
       type: "experience",
       icon: <Briefcase className="h-5 w-5" />
@@ -123,11 +121,10 @@ export default function Timeline() {
       organization: "Gr8 Building Service",
       period: "Feb 2023 – July 2023",
       description:
-        "Managed end-to-end web development using WordPress and GoDaddy tools.",
+        "Managed the end-to-end website development lifecycle using GoDaddy and WordPress, including domain registration, implementation, and maintenance.",
       detailedDescription: [
-        "• Increased business performance by 20% through optimized site design",
-        "• Provided ongoing site maintenance",
-        "• Handled all hosting, registration, and deployment"
+        "• Designed and deployed a user-friendly, optimized website that contributed to a 20% increase in company performance and profits within six months.",
+        "• Provided ongoing website maintenance and updates, ensuring optimal functionality and alignment with business goals.",
       ],
       type: "experience",
       icon: <Briefcase className="h-5 w-5" />
